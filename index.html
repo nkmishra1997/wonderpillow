@@ -1,208 +1,494 @@
-<!DOCTYPE HTML>
-<html>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
 <head>
-<title>Unistar Furnishing | Wonderpillow</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/jquery.min.js"></script>
-<!--<script src="js/jquery.easydropdown.js"></script>-->
-<!--start slider -->
-<link rel="stylesheet" href="css/fwslider.css" media="all">
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/fwslider.js"></script>
-<!--end slider -->
-<script type="text/javascript">
-        $(document).ready(function() {
-            $(".dropdown img.flag").addClass("flagvisibility");
+    <title>WonderPillow</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Wonderpillow, Unistar Furnishing, Pillow, Cushion, Quilt, Bolster, Home Furnishing" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-            $(".dropdown dt a").click(function() {
-                $(".dropdown dd ul").toggle();
-            });
-                        
-            $(".dropdown dd ul li a").click(function() {
-                var text = $(this).html();
-                $(".dropdown dt a span").html(text);
-                $(".dropdown dd ul").hide();
-                $("#result").html("Selected value is: " + getSelectedValue("sample"));
-            });
-                        
-            function getSelectedValue(id) {
-                return $("#" + id).find("dt a span.value").html();
-            }
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
 
-            $(document).bind('click', function(e) {
-                var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
-                    $(".dropdown dd ul").hide();
-            });
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <!-- //Fonts -->
 
-
-            $("#flagSwitcher").click(function() {
-                $(".dropdown img.flag").toggleClass("flagvisibility");
-            });
-        });
-     </script>
 </head>
+
 <body>
-	<div class="header">
-		<div class="container">
-			<div class="row">
-			  <div class="col-md-12">
-				 <div class="header-left">
-					 <div class="logo">
-						<a href="index.html"><img src="images/logo.jpg" alt=""/></a>
-					 </div>
-					 <!-- <div class="menu">
-						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
-						    <ul class="nav" id="nav">
-						    	<li><a href="shop.html">Shop</a></li>
-						    	<li><a href="team.html">Team</a></li>
-						    	<li><a href="experiance.html">Events</a></li>
-						    	<li><a href="experiance.html">Experiance</a></li>
-						    	<li><a href="shop.html">Company</a></li>
-								<li><a href="contact.html">Contact</a></li>								
-								<div class="clear"></div>
-							</ul>
-							<script type="text/javascript" src="js/responsive-nav.js"></script>
-				    </div>							 -->
-	    		    <div class="clear"></div>
-	    	    </div>
-	      </div>
-		 </div>
-	    </div>
-	</div>
-	<div class="banner">
-	<!-- start slider -->
-       <div id="fwslider">
-         <div class="slider_container">
-            <div class="slide"> 
-                <!-- Slide image -->
-               <img src="images/sliderA.jpg" class="img-responsive" alt=""/>
-                <!-- /Slide image -->
-                <!-- Texts container -->
-                <div class="slide_content">
-                    <div class="slide_content_wrap">
-                        <!-- Text title -->
-                        <h1 class="title">From Good Nights,<br>To Good Mornings</h1>
-                        <!-- /Text title -->
-                        <!-- <div class="button"><a href="#">See Details</a></div> -->
+
+    <!-- mian-content -->
+    <div class="main-banner" id="home">
+        <!-- header -->
+        <header class="header">
+            <div class="container-fluid px-lg-5">
+                <!-- nav -->
+                <nav class="py-4">
+                    <div id="logo">
+                        <h1> <a href="index.html">WonderPillow</a></h1>
                     </div>
-                </div>
-               <!-- /Texts container -->
+
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu mt-2">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <!--<li>
+                            <label for="drop-2" class="toggle">Drop Down <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">Drop Down <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="shop.html">Shop Now</a></li>
+                                <li><a href="shop-single.html">Single Page</a></li>
+                            </ul>
+                        </li>-->
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- //nav -->
             </div>
-            <!-- /Duplicate to create more slides -->
-            <div class="slide">
-               <img src="images/sliderB.jpg" class="img-responsive" alt=""/>
-                <div class="slide_content">
-                    <div class="slide_content_wrap">
-                        <h1 class="title">From Good Nights,<br>To Good Mornings</h1>
-                       	<!-- <div class="button"><a href="#">See Details</a></div> -->
-                    </div>
-                </div>
+        </header>
+        <!-- //header -->
+        <!--/banner-->
+        <div class="banner-info">
+            <p>One Stop Store for</p>
+            <h3 class="mb-4">Pillow, Cushion, Quilt and Bolsters</h3>
+            <div class="ban-buttons">
+                <a href="shop-single.html" class="btn">Shop Now</a>
+                <a href="single.html" class="btn active">Read More</a>
             </div>
-            <!--/slide -->
         </div>
-        <div class="timers"></div>
-        <div class="slidePrev"><span></span></div>
-        <div class="slideNext"><span></span></div>
-       </div>
-       <!--/slider -->
-      </div>
-	  <div class="main">
-		<div class="content-top">
-			<h2>Our Products</h2>
-			<p>Our Products are recommended by All India Medical Graduate Association ( AIMGA). We are manufacturing the pillows according to age requirement of people for their comfort.</p>
-			<div class="close_but"><i class="close1"> </i></div>
-				<ul id="flexiselDemo3">
-				<li><img src="images/pillow.jpg" /></li>
-				<li><img src="images/cushion.jpg" /></li>
-				<li><img src="images/quilts.jpg" /></li>
-				<li><img src="images/bolster.jpg" /></li>
-				<li><img src="images/babynest.jpg" /></li>
-				<li><img src="images/babyset.jpg" /></li>
-			</ul>
-		<!-- <h3>SnowBoard Extreme Series</h3> -->
-			<script type="text/javascript">
-		$(window).load(function() {
-			$("#flexiselDemo3").flexisel({
-				visibleItems: 5,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,    		
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-		    	responsiveBreakpoints: { 
-		    		portrait: { 
-		    			changePoint:480,
-		    			visibleItems: 1
-		    		}, 
-		    		landscape: { 
-		    			changePoint:640,
-		    			visibleItems: 2
-		    		},
-		    		tablet: { 
-		    			changePoint:768,
-		    			visibleItems: 3
-		    		}
-		    	}
-		    });
-		    
-		});
-		</script>
-		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-		</div>
-	</div>
-	<div class="content-bottom">
-		<div class="container">
-			<div class="row content_bottom-text">
-			  <div class="col-md-7">
-				<h3>ABOUT<br>US</h3>
-				<p class="m_1">Unistar Furnishing, a leading manufacturer of Manufacturer of Pillow, Cushions, Quilts, Bolster, Bed sheets, Mattresses,  Home Furnishing and Made-Ups since 1996 under Brand name of Suprabhat Wonderpillow managed by Mr. Rajesh Kumar Mishra, CEO of the company, having 22 years of experience in the field and known as quality Manufacturer of pillows in India.</p>
-				<p class="m_2">Our products are available in top leading showrooms of India like HomSaaz, Aura Furnishing, Hari Sons Furnishing, Foam House Kanpur, Hindustan Sales Agency Ahmadabad, Trade Centre Kolkata, etc.</p>
-			  </div>
-			</div>
-			<br><br>
-			<a href="images/priceList.pdf"><button type="button" class="btn btn-primary">Price List</button></a>
-			<a href="images/catalog.pdf"></a><button type="button" class="btn btn-primary">Catalog</button></a>
-		</div>
-	</div>
-	<div class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<ul class="footer_box">
-						<h4>About</h4>
-						<li><a href="images/priceList.pdf">Price List</a></li>
-						<li><a href="images/catalog.pdf">Catalog</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3">
-					<ul class="footer_box">
-						<h4>Customer Support</h4>
-						<li><a href="#">Easy Returns</a></li>
-						<li><a href="#">Warranty</a></li>
-						<li><a href="#">Replacement Binding Parts</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Contact Us</h4>
-							<li><a href="#">Rajesh Kumar Mishra</a></li>
-							<li><a href="#">+91 9810526592</a></li>
-							<li><a href="#">wonderpillow@rediffmail.com</a></li>
-						</ul>
-					</div>
-			</div>
-			<div class="row footer_bottom">
-				<div class="copy">
-					<p>© 2018 <a href="#">Unistar Furnishing</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>	
+        <!--// banner-inner -->
+
+    </div>
+    <!--//main-content-->
+    <!--/ab -->
+    <section class="about py-md-5 py-5">
+        <div class="container-fluid">
+            <div class="feature-grids row px-3">
+                <div class="col-lg-3 gd-bottom">
+                    <div class="bottom-gd row">
+                        <div class="icon-gd col-md-3 text-center"><span class="fas fa-couch" aria-hidden="true"></span></div>
+                        <div class="icon-gd-info col-md-9">
+                            <h3 class="mb-2">Comfortable</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 gd-bottom">
+                    <div class="bottom-gd row bottom-gd2-active">
+                        <div class="icon-gd col-md-3 text-center"><span class="fas fa-bath" aria-hidden="true"></span></div>
+                        <div class="icon-gd-info col-md-9">
+                            <h3 class="mb-2">Washable</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 gd-bottom">
+                    <div class="bottom-gd row">
+                        <div class="icon-gd col-md-3 text-center"> <span class="far fa-smile-beam" aria-hidden="true"></span></div>
+
+                        <div class="icon-gd-info col-md-9">
+                            <h3 class="mb-2">No Shapeloss</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 gd-bottom">
+                    <div class="bottom-gd row">
+                        <div class="icon-gd col-md-3 text-center"> <span class="fas fa-allergies" aria-hidden="true"></span></div>
+                        <div class="icon-gd-info col-md-9">
+                            <h3 class="mb-2">Allergy Free</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="feature-grids row px-3" style="padding-top:20px;">
+                <div class="col-lg-3 gd-bottom">
+                    <div class="bottom-gd row">
+                        <div class="icon-gd col-md-3 text-center"> <span class="fas fa-grin-stars" aria-hidden="true"></span></div>
+                        <div class="icon-gd-info col-md-9">
+                            <h3 class="mb-2">Smell & Damp Free</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 gd-bottom">
+                    <div class="bottom-gd row">
+                        <div class="icon-gd col-md-3 text-center"> <span class="fas fa-feather" aria-hidden="true"></span></div>
+                        <div class="icon-gd-info col-md-9">
+                            <h3 class="mb-2">Light Weight & Uniform</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 gd-bottom">
+                    <div class="bottom-gd row">
+                        <div class="icon-gd col-md-3 text-center"> <span class="fa fa-cloud" aria-hidden="true"></span></div>
+                        <div class="icon-gd-info col-md-9">
+                            <h3 class="mb-2">Weather friendly</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 gd-bottom">
+                    <div class="bottom-gd row">
+                        <div class="icon-gd col-md-3 text-center"> <span class="fas fa-shopping-cart" aria-hidden="true"></span></div>
+                        <div class="icon-gd-info col-md-9">
+                            <h3 class="mb-2">Available Online/Offline</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //ab -->
+    <!--/ab -->
+    <section class="about py-5">
+        <div class="container pb-lg-3">
+            <h3 class="tittle text-center">Our Products</h3>
+            <div class="row">
+                <div class="col-md-4 product-men">
+                    <div class="product-shoe-info shoe text-center">
+                        <div class="men-thumb-item">
+                            <img src="images/p_e.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="#">Economy Pillows</a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money">Rs. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men">
+                    <div class="product-shoe-info shoe text-center">
+                        <div class="men-thumb-item">
+                            <img src="images/p_p.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="#">Premium Pillows </a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money">Rs. 400</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men">
+                    <div class="product-shoe-info shoe text-center">
+                        <div class="men-thumb-item">
+                            <img src="images/p_m.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="#">Soft Pillows (Micro Fibre)</a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money">Rs. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men my-lg-4">
+                    <div class="product-shoe-info shoe text-center">
+                        <div class="men-thumb-item">
+                            <img src="images/cushion.JPG" class="img-fluid" alt="">
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="#">Cushion</a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money">Rs. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men my-lg-4">
+                    <div class="product-shoe-info shoe text-center">
+                        <div class="men-thumb-item">
+                            <img src="images/bolster.JPG" class="img-fluid" alt="">
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="#">Bolsters</a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money">Rs. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men my-lg-4">
+                    <div class="product-shoe-info shoe text-center">
+                        <div class="men-thumb-item">
+                            <img src="images/quilts.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="#">Quilts (Single/Double Bed)</a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money">Rs. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- //ab -->
+    <!--/testimonials-->
+    <section class="testimonials py-5">
+        <div class="container">
+            <div class="test-info text-center">
+                <h3 class="my-md-2 my-3">Recommended by Doctors</h3>
+
+                <ul class="list-unstyled w3layouts-icons clients">
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-star"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-star"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-star"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-star"></span>
+                        </a>
+                    </li>
+                </ul>
+                <p><span class="fa fa-quote-left"></span> Suprabhat Wonder Pillow is scientifically engineered to provide utmost comfort to the neck, head and shoulders. It is a recommeded product by the Doctor's Association A.I.I.G.M.A (All India Indian Medicine Graduate Association).' <span class="fa fa-quote-right"></span></p>
+
+            </div>
+        </div>
+    </section>
+    <!--//testimonials-->
+    <!--/ab -->
+    <!--<section class="about py-5">
+        <div class="container pb-lg-3">
+            <h3 class="tittle text-center">Popular Products</h3>
+            <div class="row">
+                <div class="col-md-6 latest-left">
+                    <div class="product-shoe-info shoe text-center">
+                        <img src="images/img1.jpg" class="img-fluid" alt="">
+                        <div class="shop-now"><a href="shop.html" class="btn">Shop Now</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 latest-right">
+                    <div class="row latest-grids">
+                        <div class="latest-grid1 product-men col-12">
+                            <div class="product-shoe-info shoe text-center">
+                                <div class="men-thumb-item">
+                                    <img src="images/img2.jpg" class="img-fluid" alt="">
+                                    <div class="shop-now"><a href="shop.html" class="btn">Shop Now</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latest-grid2 product-men col-12 mt-lg-4">
+                            <div class="product-shoe-info shoe text-center">
+                                <div class="men-thumb-item">
+                                    <img src="images/img3.jpg" class="img-fluid" alt="">
+                                    <div class="shop-now"><a href="shop.html" class="btn">Shop Now</a></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- //ab -->
+    <!-- brands -->
+    <!--<section class="brands py-5" id="brands">
+        <div class="container py-lg-0">
+            <div class="row text-center brand-items">
+                <div class="col-sm-2 col-3">
+                    <a href="#"><span class="fa fa-connectdevelop" aria-hidden="true"></span></a>
+                </div>
+                <div class="col-sm-2 col-3">
+                    <a href="#"><span class="fa fa-empire" aria-hidden="true"></span></a>
+                </div>
+                <div class="col-sm-2 col-3">
+                    <a href="#"><span class="fa fa-ioxhost" aria-hidden="true"></span></a>
+                </div>
+                <div class="col-sm-2 col-3">
+                    <a href="#"><span class="fa fa-first-order" aria-hidden="true"></span></a>
+                </div>
+                <div class="col-sm-2 col-3 mt-sm-0 mt-4">
+                    <a href="#"><span class="fa fa-joomla" aria-hidden="true"></span></a>
+                </div>
+                <div class="col-sm-2 col-3 mt-sm-0 mt-4">
+                    <a href="#"><span class="fa fa-dropbox" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- brands -->
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-lg-4 footer-grid_section_w3layouts">
+                    <h2 class="logo-2 mb-lg-4 mb-3">
+                        <a href="index.html">WonderPillow</a>
+                    </h2>
+                    <p>Suprabhat Wonder Pillow are made up of 100% Polyfill. Polyfill pillow have long life and are often referred to as "Life Long sleeping partners". </p>
+                    <h4 class="sub-con-fo ad-info my-4">Catch on Social</h4>
+                    <ul class="w3layouts_social_list list-unstyled">
+                        <li>
+                            <a target="blank" href="https://www.facebook.com/rajesh.mishra.378537" class="w3pvt_facebook">
+                                <span class="fa fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-lg-8 footer-right">
+                    <!--<div class="w3layouts-news-letter">
+                        <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Newsletter</h3>
+
+                        <p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
+                        <form action="#" method="post" class="w3layouts-newsletter">
+                            <input type="email" name="Email" placeholder="Enter your email..." required="">
+                            <button class="btn1"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
+
+                        </form>
+                    </div>-->
+                    <div class="row mt-lg-4 bottom-w3layouts-sec-nav mx-0">
+                        <div class="col-md-4 footer-grid_section_w3layouts">
+                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Information</h3>
+                            <ul class="list-unstyled w3layouts-icons">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="mt-3">
+                                    <a href="about.html">About Us</a>
+                                </li>
+                                <li class="mt-3">
+                                    <a href="#">Gallery</a>
+                                </li>
+                                <li class="mt-3">
+                                    <a href="#">Services</a>
+                                </li>
+                                <li class="mt-3">
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 footer-grid_section_w3layouts">
+                            <!-- social icons -->
+                            <div class="agileinfo_social_icons">
+                                <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Customer Service</h3>
+                                <ul class="list-unstyled w3layouts-icons">
+
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="#">Delivery & Returns</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="#">Waranty</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="#">Terms & Condition</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="#">Privacy Plolicy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- social icons -->
+                        </div>
+                        <div class="col-md-4 footer-grid_section_w3layouts my-md-0 my-5">
+                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Contact Info</h3>
+                            <div class="contact-info">
+                                <div class="footer-address-inf">
+                                    <h4 class="ad-info mb-2">Phone</h4>
+                                    <p>+91 9810526592</p>
+                                </div>
+                                <div class="footer-address-inf my-4">
+                                    <h4 class="ad-info mb-2">Email </h4>
+                                    <p><a href="mailto:info@example.com">wonderpillow@rediffmail.com</a></p>
+                                </div>
+                                <div class="footer-address-inf">
+                                    <h4 class="ad-info mb-2">Location</h4>
+                                    <p>New Delhi, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="cpy-right text-left row">
+                        <p class="col-md-10">© 2019 Unistar Furnishing. All rights reserved | Design by
+                            <a href="http://w3layouts.com"> W3layouts.</a>
+                        </p>
+                        <!-- move top icon -->
+                        <a href="#home" class="move-top text-right col-md-2"><span class="fa fa-long-arrow-up" aria-hidden="true"></span></a>
+                        <!-- //move top icon -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</body>
+
 </html>
